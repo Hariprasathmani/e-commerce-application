@@ -1,0 +1,13 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+  }
+  input, button {
+    margin: 5px;
+  }
+  .product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
