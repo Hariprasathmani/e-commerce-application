@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Products - MotoShowroom</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">Moto<span>Showroom</span></a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">630</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><div class="cart-icon">6D2 <span class="cart-count">0</span></div></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <div style="display:flex;gap:1rem;align-items:center;margin:1.5rem 0">
+        <input id="products-search" placeholder="Search products..." style="flex:1;padding:.6rem;border-radius:6px;border:1px solid #ddd">
+        <select id="products-category" style="padding:.6rem;border-radius:6px;border:1px solid #ddd"><option value="">All</option><option value="sport">Sport</option><option value="cruiser">Cruiser</option><option value="adventure">Adventure</option><option value="accessories">Accessories</option></select>
+      </div>
+      <div id="products-grid" class="bike-grid"></div>
+    </section>
+  </main>
+  <script defer src="../js/main.js"></script>
+</body>
+</html>

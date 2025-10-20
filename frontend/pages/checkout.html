@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Checkout - MotoShowroom</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">Moto<span>Showroom</span></a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">630</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><div class="cart-icon">6D2 <span class="cart-count">0</span></div></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <input id="fullName" placeholder="Full name" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="address" placeholder="Address" required>
+        <input id="city" placeholder="City" required>
+        <input id="zip" placeholder="Postal / ZIP" required>
+        <input id="country" placeholder="Country" required>
+      </div>
+      <h3 style="margin-top:1rem">Payment (Mock)</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <input id="cardName" placeholder="Name on card" required>
+        <input id="cardNumber" placeholder="Card number" required>
+        <input id="exp" placeholder="MM/YY" required>
+        <input id="cvc" placeholder="CVC" required>
+      </div>
+      <div style="margin-top:1rem">
+        <button class="btn btn-primary" type="submit">Place Order</button>
+      </div>
+    </form>
+  </main>
+  <script defer src="../js/main.js"></script>
+</body>
+</html>

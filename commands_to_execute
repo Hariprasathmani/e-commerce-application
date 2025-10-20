@@ -1,0 +1,9 @@
+Run Backend flask server in one terminal
+
+cd backend
+pip install -r requirements.txt
+python app.py
+
+Run Front end node server in another terminal
+cd frontend
+node server.js
