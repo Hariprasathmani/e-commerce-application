@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your order has been confirmed - MotoShowroom">
+  <title>Order Confirmed - MotoShowroom</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<div class="toast-container" id="toast-container"></div>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <a href="landing.html" class="logo">Moto<span>Showroom</span></a>
+    <div class="nav-actions">
+      <div id="auth-nav-area"></div>
+    </div>
+  </div>
+</header>
+
+<main class="confirmation-page">
+  <div class="confirmation-card">
+    <div class="confirmation-icon">✓</div>
+    <h1>Order Confirmed!</h1>
+    <p style="color:var(--text-light);margin-bottom:1rem;">Thank you for your purchase! Your order has been successfully placed.</p>
+
+    <div class="order-id-box" id="order-id-box">
+      Loading order details...
+    </div>
+
+    <div class="confirmation-steps">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-text">Order confirmation sent to your email</div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-text">Our team will process your order within 24 hours</div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-text">Shipping details and tracking info will be emailed to you</div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-text">Your bike will be delivered with full insurance coverage</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;">
+      <a href="orders.html" class="btn btn-primary">📦 View My Orders</a>
+      <a href="index.html" class="btn btn-outline">Continue Shopping</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2025 MotoShowroom. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const orderId = new URLSearchParams(window.location.search).get('orderId');
+    const box = document.getElementById('order-id-box');
+    if (orderId) {
+      box.innerHTML = `Order ID: <strong>#${orderId}</strong>`;
+    } else {
+      box.innerHTML = 'No order ID found.';
+    }
+    showToast('Your order has been confirmed! 🎉', 'success');
+  });
+</script>
+</body>
+</html>

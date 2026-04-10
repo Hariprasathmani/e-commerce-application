@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" id="landing-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MotoShowroom - Premium Motorcycle Dealership. Shop top brands, exclusive deals, and unbeatable service.">
+  <title>MotoShowroom - Ride With Power</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="page-loader">
+  <div class="loader-logo">Moto<span>Showroom</span></div>
+  <div class="loader-bar"><div class="loader-progress"></div></div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- Header (transparent on landing, solid on scroll) -->
+<header id="main-header">
+  <div class="container header-inner">
+    <a href="landing.html" class="logo">Moto<span>Showroom</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="landing.html" class="active">Home</a>
+      <a href="index.html">Shop</a>
+      <a href="landing.html#services">Services</a>
+      <a href="landing.html#testimonials">Reviews</a>
+    </nav>
+    <div class="nav-actions">
+      <div id="auth-nav-area"></div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="landing-hero">
+  <div class="container">
+    <div class="landing-hero-grid">
+      <div class="landing-content">
+        <div class="landing-badge">🏍️ #1 Premium Motorcycle Dealership</div>
+        <h1 class="landing-title">
+          Ride With<br><span class="highlight">Unstoppable</span><br>Power
+        </h1>
+        <p class="landing-subtitle">
+          Discover premium motorcycles from the world's top brands. From sport to cruiser, find your perfect ride with expert guidance and unbeatable prices.
+        </p>
+        <div class="landing-actions">
+          <a href="index.html" class="btn btn-primary btn-lg">Shop Now</a>
+          <a href="landing.html#features" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:white;">
+            Explore More
+          </a>
+        </div>
+        <div class="landing-stats">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Motorcycles</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">15k+</span>
+            <span class="stat-label">Happy Riders</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">20yr</span>
+            <span class="stat-label">Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="landing-visual">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80" alt="Premium Motorcycle" loading="eager">
+        <div class="floating-card card-1">
+          <div class="fc-label">Top Seller</div>
+          <div class="fc-value">Yamaha R1 🏆</div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="fc-label">Starting From</div>
+          <div class="fc-value">$299.99</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features" style="background:var(--bg-light);">
+  <div class="container">
+    <h2 class="section-title">Why Choose MotoShowroom?</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🏅</span>
+        <h3>Premium Quality</h3>
+        <p>Every bike is certified, inspected, and comes with our quality guarantee. Only the best makes it to our showroom.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💰</span>
+        <h3>Best Prices</h3>
+        <p>Competitive pricing with flexible financing options. We beat any verified competitor price on the same model.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <h3>Expert Service</h3>
+        <p>Certified technicians with decades of experience. Full after-sale support, maintenance, and repairs.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🚚</span>
+        <h3>Nationwide Delivery</h3>
+        <p>Specialized motorcycle transport with real-time tracking. Safe, insured delivery to your doorstep.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛡️</span>
+        <h3>Extended Warranty</h3>
+        <p>Comprehensive protection plans available for every purchase. Ride with complete peace of mind.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📞</span>
+        <h3>24/7 Support</h3>
+        <p>Our rider community team is always here for you. Expert help whenever you need it, day or night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Shop By Category</h2>
+    <div class="category-grid">
+      <div class="category-card" onclick="window.location.href='index.html?category=sport'">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80" alt="Sport Bikes">
+        <div class="category-overlay">
+          <div class="category-name">Sport Bikes</div>
+          <div class="category-count">High-performance racing</div>
+        </div>
+      </div>
+      <div class="category-card" onclick="window.location.href='index.html?category=cruiser'">
+        <img src="https://images.unsplash.com/photo-1580310614697-2c9d4e7290e3?auto=format&fit=crop&w=600&q=80" alt="Cruisers">
+        <div class="category-overlay">
+          <div class="category-name">Cruisers</div>
+          <div class="category-count">Classic comfort riding</div>
+        </div>
+      </div>
+      <div class="category-card" onclick="window.location.href='index.html?category=adventure'">
+        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=80" alt="Adventure Bikes">
+        <div class="category-overlay">
+          <div class="category-name">Adventure</div>
+          <div class="category-count">Off-road explorers</div>
+        </div>
+      </div>
+      <div class="category-card" onclick="window.location.href='index.html?category=accessories'">
+        <img src="https://images.unsplash.com/photo-1600679472829-3044539ce8ed?auto=format&fit=crop&w=600&q=80" alt="Accessories">
+        <div class="category-overlay">
+          <div class="category-name">Accessories</div>
+          <div class="category-count">Gear & equipment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section section" id="services">
+  <div class="container">
+    <h2 class="section-title">Our Professional Services</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1599037688079-4f6ef2e16e3c?auto=format&fit=crop&w=700&q=80"
+             alt="Workshop" style="border-radius:var(--radius-xl);width:100%;box-shadow:var(--shadow-xl);">
+      </div>
+      <div>
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+            <div style="width:48px;height:48px;background:rgba(233,69,96,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🔧</div>
+            <div>
+              <h4 style="margin-bottom:0.5rem;color:var(--dark);">Professional Maintenance</h4>
+              <p style="font-size:0.9rem;color:var(--text-light);margin:0;">Certified technicians provide expert maintenance with genuine parts from all major brands.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+            <div style="width:48px;height:48px;background:rgba(6,214,160,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🛡️</div>
+            <div>
+              <h4 style="margin-bottom:0.5rem;color:var(--dark);">Extended Warranty</h4>
+              <p style="font-size:0.9rem;color:var(--text-light);margin:0;">Comprehensive protection plans covering all major components with 24/7 roadside assistance.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+            <div style="width:48px;height:48px;background:rgba(245,166,35,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">💳</div>
+            <div>
+              <h4 style="margin-bottom:0.5rem;color:var(--dark);">Flexible Financing</h4>
+              <p style="font-size:0.9rem;color:var(--text-light);margin:0;">Affordable payment plans with competitive interest rates and instant credit approval.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+            <div style="width:48px;height:48px;background:rgba(59,130,246,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">🚚</div>
+            <div>
+              <h4 style="margin-bottom:0.5rem;color:var(--dark);">Nationwide Delivery</h4>
+              <p style="font-size:0.9rem;color:var(--text-light);margin:0;">Specialized transport across the entire country with GPS tracking and full insurance.</p>
+            </div>
+          </div>
+        </div>
+        <a href="index.html" class="btn btn-primary mt-3" style="margin-top:2rem;">Shop Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section section" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">What Our Riders Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"The Yamaha R1 I bought is absolutely incredible. The team was professional, knowledgeable, and got me the best deal. Couldn't be happier!"</p>
+        <p class="testimonial-author">— Jake Morrison, Sport Rider</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"First-time buyer here. The team walked me through every option and made me feel at ease. My Harley Fat Boy is exactly what I dreamed of!"</p>
+        <p class="testimonial-author">— Sarah Johnson, Cruiser Fan</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"Great selection, awesome financing options, and the after-sale service is top-notch. Got my BMW GS delivered in perfect condition!"</p>
+        <p class="testimonial-author">— Miguel Rodriguez, Adventure Rider</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="newsletter-section">
+  <div class="container">
+    <h2>Join Our Rider Community</h2>
+    <p>Subscribe for exclusive offers, riding events, new arrivals, and the latest motorcycle news.</p>
+    <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="email" placeholder="Enter your email address" class="newsletter-input" required id="newsletter-email">
+      <button type="submit" class="newsletter-btn">Subscribe Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="landing.html" class="logo">Moto<span>Showroom</span></a>
+        <p>Your premium destination for top motorcycles and gear since 2005. Experience the thrill of the ride.</p>
+        <div class="social-links">
+          <a class="social-link" href="#" title="Facebook">f</a>
+          <a class="social-link" href="#" title="Instagram">📷</a>
+          <a class="social-link" href="#" title="Twitter">𝕏</a>
+          <a class="social-link" href="#" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="index.html?category=sport">Sport Bikes</a></li>
+          <li><a href="index.html?category=cruiser">Cruisers</a></li>
+          <li><a href="index.html?category=adventure">Adventure</a></li>
+          <li><a href="index.html?category=accessories">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Locations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MotoShowroom. All rights reserved.</p>
+      <p>Made with ❤️ for riders everywhere</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+<script>
+  // Landing-page specific: sticky header on scroll
+  const header = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  // Newsletter form
+  function handleNewsletter(e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletter-email').value;
+    showToast(`🎉 Thanks for subscribing with ${email}!`, 'success');
+    e.target.reset();
+  }
+</script>
+</body>
+</html>

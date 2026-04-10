@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Your shopping cart">
+	<title>Shopping Cart - MotoShowroom</title>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+	<header>
+		<div class="container header-container">
+			<a href="index.html" class="logo">Moto<span>Showroom</span></a>
+			<button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Shop</a></li>
+					<li><a href="login.html">Account</a></li>
+					<li>
+						<div class="cart-icon" id="cart-icon">
+							🛒 <span class="cart-count" id="cart-count">0</span>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<h1 style="margin-bottom: 2rem;">Shopping Cart</h1>
+
+				<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+					<div>
+						<div id="cart-items-list"></div>
+						<div id="empty-cart" style="text-align: center; padding: 3rem;">
+							<p style="color: var(--text-light); margin-bottom: 1.5rem;">Your cart is empty</p>
+							<a href="products.html" class="btn">Continue Shopping</a>
+						</div>
+					</div>
+
+					<div>
+						<div class="cart-summary" style="background: var(--light-bg); padding: 2rem; border-radius: var(--border-radius-lg); position: sticky; top: 100px;">
+							<h3 style="margin-bottom: 1.5rem;">Order Summary</h3>
+
+							<div class="cart-summary-row">
+								<span>Subtotal:</span>
+								<span id="subtotal">$0.00</span>
+							</div>
+							<div class="cart-summary-row">
+								<span>Tax (10%):</span>
+								<span id="tax">$0.00</span>
+							</div>
+							<div class="cart-summary-row">
+								<span>Shipping:</span>
+								<span id="shipping">$0.00</span>
+							</div>
+
+							<div class="cart-summary-row total" style="border-top: 2px solid var(--border); padding-top: 1rem; margin-top: 1rem;">
+								<span>Total:</span>
+								<span id="total">$0.00</span>
+							</div>
+
+							<button class="checkout-btn" onclick="location.href='checkout.html'" style="margin-top: 1.5rem;">Proceed to Checkout</button>
+							<button class="btn btn-outline" style="width: 100%; margin-top: 1rem;" onclick="location.href='products.html'">Continue Shopping</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div style="text-align: center; color: rgba(255,255,255,0.7);">
+				<p>&copy; 2025 MotoShowroom. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../api.js"></script>
+	<script defer src="../js/main.js"></script>
+</body>
+</html>

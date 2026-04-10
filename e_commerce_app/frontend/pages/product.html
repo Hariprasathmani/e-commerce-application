@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Motorcycle product details">
+	<title>Product Details - MotoShowroom</title>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+	<header>
+		<div class="container header-container">
+			<a href="index.html" class="logo">Moto<span>Showroom</span></a>
+			<button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Shop</a></li>
+					<li><a href="login.html">Account</a></li>
+					<li>
+						<div class="cart-icon" id="cart-icon">
+							🛒 <span class="cart-count" id="cart-count">0</span>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<a href="products.html" style="color: var(--secondary); margin-bottom: 1rem; display: inline-block;">← Back to Shop</a>
+				
+				<div class="bike-details" id="product-details">
+					<div style="background: var(--light-bg); border-radius: var(--border-radius-lg); overflow: hidden;">
+						<img src="" alt="" id="product-image" class="bike-details-img" style="width: 100%; height: 400px; object-fit: cover; display: block;">
+					</div>
+
+					<div class="bike-details-info">
+						<h1 id="product-name" class="bike-details-title"></h1>
+						<p id="product-category" class="bike-details-category"></p>
+						<p id="product-price" class="bike-details-price"></p>
+						<p id="product-description" class="bike-details-description"></p>
+
+						<div class="bike-details-specs">
+							<h4>Specifications</h4>
+							<ul id="product-specs"></ul>
+						</div>
+
+						<div class="bike-quantity-selector">
+							<label for="quantity">Quantity:</label>
+							<input type="number" id="quantity" min="1" value="1" style="width: 70px;">
+						</div>
+
+						<button class="checkout-btn" id="add-to-cart-btn">Add to Cart</button>
+						<button class="btn btn-outline" style="width: 100%; margin-top: 1rem;" onclick="location.href='products.html'">Continue Shopping</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div style="text-align: center; color: rgba(255,255,255,0.7);">
+				<p>&copy; 2025 MotoShowroom. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../api.js"></script>
+	<script defer src="../js/main.js"></script>
+</body>
+</html>

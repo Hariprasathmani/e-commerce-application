@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Browse our motorcycle collection">
+	<title>Shop Motorcycles - MotoShowroom</title>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+	<header>
+		<div class="container header-container">
+			<a href="index.html" class="logo">Moto<span>Showroom</span></a>
+			<button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Shop</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="login.html">Account</a></li>
+					<li>
+						<div class="cart-icon" id="cart-icon">
+							🛒 <span class="cart-count" id="cart-count">0</span>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="hero" style="height: 40vh;">
+		<div class="hero-content">
+			<h1>Browse Our Collection</h1>
+			<p>Find your perfect motorcycle from our premium selection.</p>
+		</div>
+	</section>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<div style="margin-bottom: 2rem; border-bottom: 2px solid var(--border-light); padding-bottom: 2rem;">
+					<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; max-width: 600px;">
+						<input type="text" id="search" placeholder="Search bikes..." class="form-control" style="padding: 0.8rem; border: 2px solid var(--border); border-radius: var(--border-radius);">
+						<select id="category-filter" style="padding: 0.8rem; border: 2px solid var(--border); border-radius: var(--border-radius);">
+							<option value="">All Categories</option>
+							<option value="sport">Sport</option>
+							<option value="cruiser">Cruiser</option>
+							<option value="adventure">Adventure</option>
+							<option value="accessories">Accessories</option>
+						</select>
+						<input type="number" id="min-price" placeholder="Min Price" style="padding: 0.8rem; border: 2px solid var(--border); border-radius: var(--border-radius);">
+					</div>
+				</div>
+
+				<h2 class="section-title">All Motorcycles</h2>
+				<div class="bike-grid" id="products-grid"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div style="text-align: center; color: rgba(255,255,255,0.7);">
+				<p>&copy; 2025 MotoShowroom. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Product Modal -->
+	<div class="modal-overlay" id="product-modal">
+		<div class="modal">
+			<div class="modal-header">
+				<h2 id="modal-title">Product Details</h2>
+				<button class="close-modal">✕</button>
+			</div>
+			<div class="modal-body" id="modal-body"></div>
+		</div>
+	</div>
+
+	<!-- Cart Modal -->
+	<div class="modal-overlay" id="cart-modal">
+		<div class="modal">
+			<div class="modal-header">
+				<h2>Shopping Cart</h2>
+				<button class="close-modal" aria-label="Close">✕</button>
+			</div>
+			<div class="modal-body" id="cart-items">
+				<div style="text-align: center; padding: 2rem; color: var(--text-light);">
+					<p>Your cart is empty</p>
+					<a href="products.html" class="btn mt-3">Continue Shopping</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../api.js"></script>
+	<script defer src="../js/main.js"></script>
+</body>
+</html>

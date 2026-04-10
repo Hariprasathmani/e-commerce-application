@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a MotoShowroom account to start shopping premium motorcycles.">
+  <title>Create Account - MotoShowroom</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<div class="toast-container" id="toast-container"></div>
+
+<div class="auth-page">
+  <!-- Visual Side -->
+  <div class="auth-visual" style="background:linear-gradient(160deg,#0d0d1a 0%,#1a1a2e 40%,#16213e 70%,#0f3460 100%),url('https://images.unsplash.com/photo-1558981033-0f0009814a14?auto=format&fit=crop&w=800&q=80') center/cover;background-blend-mode:overlay;">
+    <div class="auth-logo">Moto<span>Showroom</span></div>
+    <h2>Join the Rider Community</h2>
+    <p>Create your free account and get access to exclusive deals, faster checkout, and order tracking.</p>
+    <div class="auth-visual-features">
+      <div class="auth-feature">
+        <div class="auth-feature-icon">🏍️</div>
+        <span>Access 500+ premium motorcycles</span>
+      </div>
+      <div class="auth-feature">
+        <div class="auth-feature-icon">💰</div>
+        <span>Member-exclusive discounts</span>
+      </div>
+      <div class="auth-feature">
+        <div class="auth-feature-icon">📦</div>
+        <span>Real-time order tracking</span>
+      </div>
+      <div class="auth-feature">
+        <div class="auth-feature-icon">🔒</div>
+        <span>Secure account & data protection</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Side -->
+  <div class="auth-form-side">
+    <div class="auth-form-container">
+      <div style="margin-bottom:2rem;">
+        <a href="landing.html" class="logo" style="font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;color:var(--dark);display:block;margin-bottom:2rem;">
+          Moto<span style="color:var(--secondary);">Showroom</span>
+        </a>
+      </div>
+
+      <div class="auth-form-header">
+        <h1>Create Account</h1>
+        <p>Fill in your details to get started for free</p>
+      </div>
+
+      <form id="register-form" onsubmit="handleRegister(event)">
+        <div class="form-group">
+          <label for="reg-username">Full Name</label>
+          <input type="text" id="reg-username" class="form-input" placeholder="John Rider" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="reg-password" class="form-input" placeholder="Min. 6 characters" required minlength="6" autocomplete="new-password">
+            <button type="button" class="password-toggle" onclick="togglePass('reg-password', this)">👁</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-password-confirm">Confirm Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="reg-password-confirm" class="form-input" placeholder="Repeat your password" required autocomplete="new-password">
+            <button type="button" class="password-toggle" onclick="togglePass('reg-password-confirm', this)">👁</button>
+          </div>
+        </div>
+
+        <div id="reg-error" class="error-msg"></div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="reg-btn" style="margin-top:0.5rem;">
+          Create Account →
+        </button>
+      </form>
+
+      <div class="auth-divider">or</div>
+
+      <p class="auth-alt">
+        Already have an account? <a href="login.html">Sign in</a>
+      </p>
+      <p class="auth-alt" style="margin-top:0.75rem;">
+        <a href="landing.html" style="color:var(--text-light);font-size:0.85rem;">← Back to Home</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (Auth.isLoggedIn()) window.location.href = 'index.html';
+  });
+
+  async function handleRegister(e) {
+    e.preventDefault();
+    const username = document.getElementById('reg-username').value.trim();
+    const email = document.getElementById('reg-email').value.trim();
+    const password = document.getElementById('reg-password').value;
+    const confirm = document.getElementById('reg-password-confirm').value;
+    const errEl = document.getElementById('reg-error');
+    const btn = document.getElementById('reg-btn');
+
+    errEl.classList.remove('show');
+
+    if (password !== confirm) {
+      errEl.textContent = 'Passwords do not match. Please try again.';
+      errEl.classList.add('show');
+      return;
+    }
+    if (password.length < 6) {
+      errEl.textContent = 'Password must be at least 6 characters.';
+      errEl.classList.add('show');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Creating account...';
+
+    try {
+      await Auth.register(username, email, password);
+      showToast('Account created! Welcome to MotoShowroom 🎉', 'success');
+      setTimeout(() => window.location.href = 'index.html', 1000);
+    } catch (err) {
+      errEl.textContent = err.message || 'Registration failed. Please try again.';
+      errEl.classList.add('show');
+      btn.disabled = false;
+      btn.textContent = 'Create Account →';
+    }
+  }
+
+  function togglePass(inputId, btn) {
+    const input = document.getElementById(inputId);
+    if (input.type === 'password') { input.type = 'text'; btn.textContent = '🙈'; }
+    else { input.type = 'password'; btn.textContent = '👁'; }
+  }
+</script>
+</body>
+</html>

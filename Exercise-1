@@ -1,8 +1,0 @@
-Users
-  u_id,name,city
-Products
-  p_id,name,price,category,stock
-Orders
-  o_id,u_id,p_id,qty,status
-Payments
-  pay_id,o_id,amount,status,method
